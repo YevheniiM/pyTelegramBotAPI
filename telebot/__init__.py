@@ -311,7 +311,8 @@ class TeleBot:
             if update.pre_checkout_query:
                 new_pre_checkout_querys.append(update.pre_checkout_query)
 
-        logger.debug('Received {0} new updates'.format(len(updates)))
+        print('Received {0} new updates'.format(len(updates)))
+        print('new_messages: ', len(new_messages))
         if len(new_messages) > 0:
             self.process_new_messages(new_messages)
         if len(edited_new_messages) > 0:
